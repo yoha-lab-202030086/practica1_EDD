@@ -1,0 +1,11 @@
+# Ejecutables
+*.exe
+
+# Archivos objeto
+*.o
+
+# Carpeta de compilación
+build/
+
+# Archivos temporales
+*.log

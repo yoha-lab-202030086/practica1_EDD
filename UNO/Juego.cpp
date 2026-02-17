@@ -19,15 +19,15 @@ void Juego::MostrarMenu() {
  
 
     if(opcion == 1) {
-    iniciarSimple();
+    Config.setModoFlip(false);
     } else if(opcion == 2) {
-    iniciarFlip(); 
+    Config.getModoFlip(true); 
     } else { 
     cout << "Opcion invalida" << endl;
   }
 }
 
-void Juego::iniciarSimple() {
+void Juego::iniciarSimple()   {
  cout << "Iniciando UNO simple..." << endl; 
 }
 

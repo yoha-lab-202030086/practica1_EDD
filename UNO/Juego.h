@@ -1,8 +1,8 @@
 #ifndef JUEGO_H
 #define JUEGO_H
 
-/*#include <iostream>
 #include "Configuracion.h"
+/*
 #include "ListaCircular.h"
 #include "Pila.h"
 #include "Nodo.h"
@@ -12,7 +12,8 @@
 class Juego {
 
 private: 
-    /*Configuracion config; 
+    Configuracion config; 
+    /*
     ListaCircular jugadores; 
     Pila Mazo; 
     Nodo* jugadorActual; 
@@ -28,7 +29,8 @@ public:
     void MostrarMenu();
     void iniciar();
     
-    /*void configurarJuego();
+    void configurarJuego();
+    /*
     void crearJugadores();
     void crearMazo();
     void repartirCartar();

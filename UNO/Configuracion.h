@@ -1,14 +1,16 @@
-#include guard 
+#ifndef CONFIGURACION_H
+#define CONFUGURACION_H
 
 class Configuracion {
     private: 
     bool modoFlip; 
 
-    publico: 
+    public: 
     Configuracion(); 
     void setModoFlip(bool valor); 
     bool = getModoFlip(); 
     }; 
 
+    #endif
     
 

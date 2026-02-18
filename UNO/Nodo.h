@@ -1,9 +1,14 @@
-#include guard
+#ifndef NODO_H
+#define NODO_H
+
+#include "Carta.h"
 
 class Nodo { 
     public: 
-    int dato; 
+    Carta dato; 
     Nodo* siguiente; 
     
-    Nodo(int valor); 
+    Nodo(Carta carta); 
    };
+
+   #endif

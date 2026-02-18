@@ -1,4 +1,6 @@
-#include guard 
+#ifndef PILA_H
+#define PILA_H
+
 #include "Nodo.h"
 
 class Pila { 
@@ -9,8 +11,11 @@ class Pila {
     public: 
     Pila(); 
     ~Pila();
-    void push(int valor); 
-    int pop();
-    bool estaVacia(); 
-    }; 
+
+    void push(Carta carta); 
+    Carta pop();
     
+    bool estaVacia(); 
+}; 
+    
+#endif

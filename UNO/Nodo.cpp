@@ -1,6 +1,7 @@
 #include "Nodo.h"
-Nodo::Nodo(int valor) {
-    dato = valor; 
+
+Nodo::Nodo(Carta carta) {
+    dato = carta; 
     siguiente = NULL; 
     }
     

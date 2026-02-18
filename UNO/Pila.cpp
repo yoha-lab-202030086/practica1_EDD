@@ -1,4 +1,7 @@
 #include "Pila.h"
+#include <iostream>
+
+using namespace std; 
 
 Pila::Pila() {  
     tope = nullptr; 
@@ -8,22 +11,29 @@ bool Pila::estaVacia() {
     return tope == nullptr;
   } 
 
-void Pila::push(int valor) {
-    Nodo* nuevoNodo = new Nodo(valor); 
+void Pila::push(Carta carta) {
+    Nodo* nuevoNodo = new Nodo(carta); 
     nuevoNodo->siguiente = tope; 
     tope = nuevoNodo; 
     }
 
-    int Pila::pop() {
-        if(estaVacia()) {
-            cout <<"La pila esta vacia"; 
-            return -1; 
+Carta Pila::pop() {
+        
+    if(estaVacia()) {
+            cout <<"La pila esta vacia\n"; 
+            return Carta("", ""); 
             }
-int valor = tope->dato;
+      Carta carta = tope->dato;
         Nodo* temp = tope; 
         tope = tope->siguiente;
         delete temp; 
 
-        return valor; 
+        return carta; 
+}
+
+Pila::~Pila() {
+    while (!estaVacia()) {
+        pop();
+    }
 }
 

@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Jugador.h"
 #include "Mazo.h"
 
 using namespace std;  
@@ -11,13 +12,16 @@ Mazo mazo;
 //crear cartas 
 mazo.crearMazoSimple();
 
-cout << "Mazo creado.\n\n"; 
+Jugador jugador1("Jugador 1");
 
 for (int i = 0; i < 5; i++) {
-    Carta carta = mazo.robarCarta();
-cout << carta.getColor() << " " << carta.getValor()<< endl;
- 
+    jugador1.robarCarta(mazo.robarCarta());
 }
+
+jugador1.mostrarMano();
+
+cout << "\nCantidad de cartas: "
+<< jugador1.cantidadCartas() << endl;
 
 return 0;
 }

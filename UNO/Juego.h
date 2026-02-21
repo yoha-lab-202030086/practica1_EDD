@@ -2,40 +2,29 @@
 #define JUEGO_H
 
 #include "Configuracion.h"
-/*
-#include "ListaCircular.h"
-#include "Pila.h"
-#include "Nodo.h"
-*/
-
+#include "Mazo.h"
+#include "Jugador.h"
 
 class Juego {
 
 private: 
     Configuracion config; 
-    /*
-    ListaCircular jugadores; 
-    Pila Mazo; 
-    Nodo* jugadorActual; 
-    */
+    Mazo mazo; 
 
-    int direccion; 
+    Jugador jugador1; 
+    Jugador jugador2; 
+
+    Carta cartaEnMesa; 
 
     void iniciarSimple(); 
     void iniciarFlip(); 
 
 public: 
+Juego();
+
     void bienvenida();
     void MostrarMenu();
     void iniciar();
-    
-    void configurarJuego();
-    /*
-    void crearJugadores();
-    void crearMazo();
-    void repartirCartar();
-    void iniciarPartida();
-    */
     
     };
     #endif

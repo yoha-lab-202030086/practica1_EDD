@@ -1,6 +1,6 @@
 #include "Configuracion.h"
 
-Configuracion::Configuracion(); { 
+Configuracion::Configuracion() { 
     modoFlip = false; 
     } 
 

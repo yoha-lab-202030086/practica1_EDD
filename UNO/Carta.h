@@ -2,21 +2,19 @@
 #define CARTA_H
 
 #include <string>
-using namespace std; 
+
+using namespace std;
 
 class Carta {
+public:
+    string color;
+    int numero;
 
-private: 
-string color; 
-string valor; 
+    Carta();
+    Carta(string c, int n);
 
-public: 
-Carta();
-Carta(string color, string valor); 
-string getColor();
-string getValor(); 
-
-void mostrar(); 
-
+    void mostrar();
+    bool esIgual(Carta otra);
 };
+
 #endif

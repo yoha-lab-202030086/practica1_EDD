@@ -1,18 +1,21 @@
 #ifndef MAZO_H
 #define MAZO_H
+#include "NodoCarta.h"
+#include <string>
 
-#include "Pila.h"
+using namespace std;
 
 class Mazo {
+private:
+    NodoCarta* cima;
 
-    private: 
-    Pila cartas; 
-
-    public: 
+public:
     Mazo();
-
-   void crearMazoSimple(); 
-   Carta robarCarta(); 
+    void push(Carta c);
+    Carta pop();
+    bool vacio();
+    void crearMazo();
+    void barajar();
 };
 
 #endif

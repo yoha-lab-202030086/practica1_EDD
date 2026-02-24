@@ -1,26 +1,37 @@
 #include "Carta.h"
 #include <iostream>
+#include <iomanip>
 
-using namespace std; 
+using namespace std;
+
+extern void setColor(int);
 
 Carta::Carta() {
-        color = "";
-        valor = "";
- }
-        
-Carta::Carta(string color, string valor) {
-    this->color = color; 
-    this->valor = valor; 
+    color = "";
+    numero = -1;
 }
 
-string Carta::getColor() {
-        return color; 
-}
-string Carta::getValor() {
-        return valor; 
+Carta::Carta(string c, int n) {
+    color = c;
+    numero = n;
 }
 
 void Carta::mostrar() {
-    cout << "[" << color <<" " << valor << "j" << endl;
- }
 
+    int colorCode = 7;
+
+    if(color == "Rojo") colorCode = 12;
+    if(color == "Verde") colorCode = 10;
+    if(color == "Azul") colorCode = 9;
+    if(color == "Amarillo") colorCode = 14;
+
+    setColor(colorCode);
+
+    cout << "[ " << setw(8) << left << color 
+         << " " << numero << " ]";
+
+    setColor(7);
+}
+bool Carta::esIgual(Carta otra) {
+    return color == otra.color || numero == otra.numero;
+}

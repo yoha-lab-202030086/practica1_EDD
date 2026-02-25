@@ -4,25 +4,30 @@
 
 using namespace std;
 
+// Constructor: nombre del jugador - O(1)
 Jugador::Jugador(string n) {
     nombre = n;
     cantidad = 0;
 }
 
+//Nueva carta del jugador - O(1)
 void Jugador::agregarCarta(Carta c) {
     mano[cantidad] = c;
     cantidad++;
 }
 
+// Verificar cartas - O(n)
 bool Jugador::tieneMovimiento(Carta actual) {
+   
     for(int i = 0; i < cantidad; i++) {
         if(mano[i].esIgual(actual)) {
-            return true;
+            return true; // Movimiento válido encontrado
         }
     }
-    return false;
+    return false; 
 }
 
+// O(n)
 void Jugador::mostrarCartas() {
 
     for(int i = 0; i < cantidad; i++) {
@@ -44,6 +49,7 @@ Carta Jugador::getCarta(int i) {
     return mano[i];
 }
 
+// Quita una carta de la mano - O(1)
 void Jugador::eliminarCarta(int i) {
     mano[i] = mano[cantidad - 1];
     cantidad--;

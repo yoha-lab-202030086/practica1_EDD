@@ -1,11 +1,19 @@
-# Ejecutables
-*.exe
-
 # Archivos objeto
 *.o
+*.obj
+
+# Librerías
+*.a
+*.lib
 
 # Carpeta de compilación
 build/
+cmake-build-*/
 
 # Archivos temporales
 *.log
+*.tmp
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db

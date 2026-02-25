@@ -5,9 +5,11 @@
 
 class NodoCarta {
 public:
+    // O(1)
     Carta carta;
     NodoCarta* siguiente;
 
+    // O(1)
     NodoCarta(Carta c);
 };
 
